@@ -17,31 +17,35 @@ public static void main(String[] args)throws FileNotFoundException, IOException{
 	String città = in.nextLine();
 
 	 {
-	 switch(città) 
+	 switch(città.toUpperCase()) 
 	 {
-	 case "New York":
-		    Scanner tastiera= new Scanner(System.in);
-			System.out.println("che parola vuoi cercare nel file" );
-			String parola= tastiera.nextLine();
-			System.out.println("la parola che hai scelto di cercare è:" + parola);
+	 case "NEW YORK":
 			BufferedReader reader = new BufferedReader(new FileReader("città.txt"));
 			String line = reader.readLine();
-			/*while(line!= null)
-			{
-				
-				if(line.contains(parola)==true) {
-					System.out.println(line);
-				}
-				line = reader.readLine();*/
+			
 		 Scanner scan = new Scanner(new File(fileName));
-		 String rline = scan.nextLine();
-		 while(scan.hasNextLine()){
-			  rline += scan.nextLine();
-			  if(rline.contains(città)==true && line.contains(parola)==true) {
-				  break;
-			  }
-		 }
+		 String rline = "";
+		 Boolean iniziato = false;
+		 do{
+			 String app = scan.nextLine();
+
+			 if(app.contains("NEW YORK"))
+				 iniziato = true;
+			 if(iniziato)
+			 {
+			 if(app.contains("python"))
+			 {
+				 rline += app;
+				 System.out.println(app);
+			 }
+			 else if(app.contains("."))
+				 break;
+			 }
+		 }while(scan.hasNextLine());
+		 
 		 statistiche times =  new statistiche(rline);
+		 times.stampaStatistiche();
+		 /*
 		 String word = "part time";
 		 String word2 = "full time";
 		 String word3 = "remoto";
@@ -60,6 +64,8 @@ public static void main(String[] args)throws FileNotFoundException, IOException{
 		 System.out.println(ris2);
 		 System.out.println(ris3);
 		 System.out.println(ris4);
+		 */
+		 
 		 break;
 	 case "Orlando":
 		 
@@ -78,4 +84,7 @@ public static void main(String[] args)throws FileNotFoundException, IOException{
     	 
     }
 	
- }}}
+ }
+}
+
+}
