@@ -1,4 +1,3 @@
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,28 +7,51 @@ public class  phyton {
 public static void main(String[] args)throws FileNotFoundException, IOException{
 	Scanner input = new Scanner(System.in);
 	String fileName = "città.txt";
+	Scanner scan = new Scanner(new File(fileName));
+	String rline = "";
+	Boolean iniziato = false;
 	Scanner in = new Scanner(System.in);
-	System.out.println("Scegli la città in cui cercare lavoro");
-	System.out.println("Scegli tra le seguenti:");
-	System.out.println("New York Orlando Los Angeles Chicago Washington");
+	System.out.println("Scegli tra le seguenti città:");
+	System.out.println("New York");
+	System.out.println("Orlando");
+	System.out.println("Los Angeles");
+	System.out.println("Chicago");
+	System.out.println("Washington");
+	System.out.println("Fine per uscire");
+	statistiche times;
+	String città;
 			
-	
-	String città = in.nextLine();
-
+	do {
+	System.out.println("Scegli la città in cui cercare lavoro");
+	città = in.nextLine();
 	 {
 	 switch(città.toUpperCase()) 
 	 {
 	 case "NEW YORK":
-			BufferedReader reader = new BufferedReader(new FileReader("città.txt"));
-			String line = reader.readLine();
-			
-		 Scanner scan = new Scanner(new File(fileName));
-		 String rline = "";
-		 Boolean iniziato = false;
 		 do{
 			 String app = scan.nextLine();
 
 			 if(app.contains("NEW YORK"))
+				 iniziato = true;
+			 if(iniziato)
+			 {
+			 if(app.contains("python"))
+			 {
+				 rline += app;
+			 }
+			 else if(app.contains("."))
+				 break;
+			 }
+		 }while(scan.hasNextLine());
+		 
+		 times =  new statistiche(rline);
+		 times.stampaStatistiche();
+		 break;
+	 case "ORLANDO":
+		 do{
+			 String app = scan.nextLine();
+
+			 if(app.contains("ORLANDO"))
 				 iniziato = true;
 			 if(iniziato)
 			 {
@@ -43,48 +65,75 @@ public static void main(String[] args)throws FileNotFoundException, IOException{
 			 }
 		 }while(scan.hasNextLine());
 		 
-		 statistiche times =  new statistiche(rline);
+		 times =  new statistiche(rline);
 		 times.stampaStatistiche();
-		 /*
-		 String word = "part time";
-		 String word2 = "full time";
-		 String word3 = "remoto";
-		 String word4 = "sede";
-		 double numero_part = times.stat(word);
-		 double numero_full = times.stat(word2);
-		 double numero_no = times.stat(word4);
-		 double numero_rem = times.stat(word3);
-		 double tot1= numero_part + numero_full;
-		 double tot2= numero_no + numero_rem;
-		 double ris1= numero_part / tot1 *100;
-		 double ris2= numero_full / tot1 *100;
-		 double ris3= numero_rem / tot2 *100;
-		 double ris4= numero_no / tot2 *100;
-		 System.out.println(ris1);
-		 System.out.println(ris2);
-		 System.out.println(ris3);
-		 System.out.println(ris4);
-		 */
+		 break;
+	 case "LOS ANGELES":
+		 do{
+			 String app = scan.nextLine();
+
+			 if(app.contains("LOS ANGELES"))
+				 iniziato = true;
+			 if(iniziato)
+			 {
+			 if(app.contains("python"))
+			 {
+				 rline += app;
+			 }
+			 else if(app.contains("."))
+				 break;
+			 }
+		 }while(scan.hasNextLine());
+		 times =  new statistiche(rline);
+		 times.stampaStatistiche();
+		 break;
+	 case "CHICAGO":
+		 do{
+			 String app = scan.nextLine();
+
+			 if(app.contains("CHICAGO"))
+				 iniziato = true;
+			 if(iniziato)
+			 {
+			 if(app.contains("python"))
+			 {
+				 rline += app;
+			 }
+			 else if(app.contains("."))
+				 break;
+			 }
+		 }while(scan.hasNextLine());
 		 
+		 times =  new statistiche(rline);
+		 times.stampaStatistiche();
 		 break;
-	 case "Orlando":
+	 case "WASHINGTON":
+		 do{
+			 String app = scan.nextLine();
+
+			 if(app.contains("WASHINGTON"))
+				 iniziato = true;
+			 if(iniziato)
+			 {
+			 if(app.contains("python"))
+			 {
+				 rline += app;
+			 }
+			 else if(app.contains("."))
+				 break;
+			 }
+		 }while(scan.hasNextLine());
 		 
+		 times =  new statistiche(rline);
+		 times.stampaStatistiche();
 		 break;
-	 case "Los Angeles":
-		
-		 break;
-	 case "Chicago":
-		 
-		 break;
-	 case "Washington":
-		 
-		 break;
-     default:
-    
-    	 
-    }
+	 case "FINE":{
+		 break;	 
+	 }
+     default: System.out.println("inserisci una delle città elencate sopra");
+	 }
 	
  }
-}
+}while(città!=null);
 
-}
+}}
