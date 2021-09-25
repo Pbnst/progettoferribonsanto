@@ -4,7 +4,7 @@ Progetto per il corso "Programmazione ad Oggetti" del corso di laurea in Ingegne
 
 ## **Introduzione**
 
-Obiettivo del progetto era crear un'interfaccia che permettesse la ricerca e il filtro di occupazioni lavorative basate su differenti linguaggi di programmazione,per permettere ad un generico studente neolaureato in ingegneria informatica di orientarsi tra le varie proposte.Oggetto principale della ricerca sono i lavori basati sull'utilizzo di python, con la possibilità di filtrare le opzioni secondo tipologia di lavoro (part-time o full-time).E' possibile scegliere tra 5 diverse città, tutto a partire dall'ottenimento di informazioni da un file di testo.
+Obiettivo del progetto era crear un'interfaccia che permettesse la ricerca e il filtro di occupazioni lavorative basate su differenti linguaggi di programmazione,per permettere ad un generico studente neolaureato in ingegneria informatica di orientarsi tra le varie proposte.Oggetto principale della ricerca sono i lavori basati sull'utilizzo di python, con la possibilità di filtrare le opzioni secondo tipologia di lavoro (part-time o full-time,da remoto o in sede).E' possibile scegliere tra 5 diverse città, tutto a partire dall'ottenimento di informazioni da un file di testo.
 Più nello specifico, le operazioni ammissibili sono:
 
  1. *Scelta del linguaggio impiegato*
