@@ -21,6 +21,14 @@ In questa sezione è riportata a livello generale la struttura del progetto, qui
 
 
 
+
+<img width="925" alt="classi ok " src="https://user-images.githubusercontent.com/89023405/134768941-b58c9f70-19ea-4091-8bc7-fee605e05d57.png">
+
+
+
+
+
+
 ## **Diagramma delle sequenze:**
 
 Analizziamo in questo punto la sequenza di operazioni da un punto di vista sequenziale, osservando come viene gestita a livello software la richiesta da parte dell'utente dall'inizio alla fine.
