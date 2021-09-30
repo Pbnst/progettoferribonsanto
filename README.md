@@ -44,6 +44,8 @@ POST | /jobs | Fornisce i lavori filtrati
 GET | /stats | Calcola le statistiche per i lavori 
 
 
+Le statistiche riguardano il numero di lavori full time, il numero di lavori a contratto, il numero di lavori in remoto e il numero di lavori in una particolare città.
+
 ## Esempi di chiamate:
 
 * GET localhost:8080/cities;
@@ -59,6 +61,8 @@ Operatore | Descrizione
 ----------|------------
 In| Mostra i Job con il valore precisato
 Nin|Mostra i job senza il valore precisato
+FullIn | Mostra i job con il valore precisato
+Part | Mostra i job con il valore precisato
 
 
 
