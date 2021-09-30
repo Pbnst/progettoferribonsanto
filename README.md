@@ -53,14 +53,14 @@ GET | /stats | Calcola le statistiche per i lavori
 
 #### Per la chiamata POST il filtro va scritto nel body
 
-# Filtri
+# Filtri e Statistiche 
 
 Operatore | Descrizione
 ----------|------------
-In| Mostra i Job con il valore precisato
-Nin|Mostra i job senza il valore precisato
-
-
+Location| Mostra i Job con il valore precisato
+Nin| Mostra i job senza il valore precisato
+FullIn| Mostra i job con il valore precisato 
+Part | Mostra i job con il valore precisato
 
 
 
