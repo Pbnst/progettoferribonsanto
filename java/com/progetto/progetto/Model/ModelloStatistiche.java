@@ -2,7 +2,7 @@ package com.progetto.progetto.Model;
 
 public class ModelloStatistiche {
 private int jobloc;
-private int jobpres;
+private int jobrem;
 private int jobfull;
 /**costruttore della classe senza parametri
  * 
@@ -33,13 +33,13 @@ public void setJobloc(int jobloc) {
  * 
  * @return
  */
-public int getJobpres() {
-	return jobpres;
+public int getJobrem() {
+	return jobrem;
 	
 }
 
-public void setJobpres(int jobpres) {
-	this.jobpres = jobpres;
+public void setJobrem(int jobrem) {
+	this.jobrem = jobrem;
 			
 }
 

@@ -26,13 +26,15 @@ public class JSONDownloader {
 	String data="";
 	String line="";
 	String url = "https://findwork.dev/api/jobs/";
+	String token = "dfac007afb1130c8d529e192f72097f254bb4fa2";
 	{
 	try{
 		
 		URLConnection openConnection = new URL(url).openConnection();
-	
-		System.setProperty("http.agent","Safari");
+		openConnection.addRequestProperty("User-Agent",
+				"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
 	InputStream in= openConnection.getInputStream();
+	openConnection.setRequestProperty("Authorization", token);
 	
 	try {
 		InputStreamReader inR=new InputStreamReader(in);

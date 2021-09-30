@@ -1,5 +1,4 @@
 package com.progetto.progetto.Model;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 public class Job {
 
 	private int id;
@@ -27,9 +26,6 @@ public class Job {
 	this.remote = remote;
 	
 	}  
-	
-	
-	
 	/** getters e setters
 	 * 
 	 * 

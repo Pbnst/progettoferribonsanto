@@ -20,6 +20,8 @@ public class Uploadstats {
 		 */
 		public static ModelloStatistiche getStats() {
 			stat.setJobloc(Statistiche.contaLocation(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
+			stat.setJobfull(Statistiche.contaftime(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
+		    stat.setJobrem(Statistiche.contaLocationnin(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
 			return stat;
 		}
 

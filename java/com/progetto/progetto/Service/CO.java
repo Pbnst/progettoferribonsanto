@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class CO {
 	/**
 	 * Effettua il parsing piu esterno, selezionando il valore colonna e un oggetto
-	 * valore, che contiene il filtro da applicare ai tweet ed eventualmente il modo
+	 * valore, che contiene il filtro da applicare ai jobs  ed eventualmente il modo
 	 * con cui aggiungere il filtro ai precedenti.
 	 * 
 	 * @param filter contiene il JSON con le informazioni sul filtraggio

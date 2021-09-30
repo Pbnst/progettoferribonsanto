@@ -71,11 +71,12 @@ public static Filter instanceFilter(String column, String operator, Object param
 
 /**
  * Questo metodo scorre i job (contenuti in un'Array) e restitusce un nuovo
+
  * ArrayList composto da soli record che risultano positivi al filtro.
  * 
  * @param filtro        desiderato
- * @param previousArray ArrayList di Tweet da filtrare
- * @return ArrayList di Tweet filtrati
+ * @param previousArray ArrayList di jobs da filtrare
+ * @return ArrayList di jobs filtrati
  */
 
 public static ArrayList<Job> FilterAND(Filter filtro, ArrayList<Job> previousArray) {
@@ -97,7 +98,7 @@ public static ArrayList<Job> FilterAND(Filter filtro, ArrayList<Job> previousArr
  * precedenti con in aggiunta quelli che rispettano il filtro
  * 
  * @param filtro        desiderato
- * @param previousArray ArrayList di Tweet iniziale
+ * @param previousArray ArrayList di job iniziale
  * @return ArrayList di job filtrati
  */
 
