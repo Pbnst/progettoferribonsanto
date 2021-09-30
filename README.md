@@ -4,7 +4,7 @@ Progetto per il corso "Programmazione ad Oggetti" del corso di laurea in Ingegne
 
 ## **Introduzione**
 
-Obiettivo del progetto era crear un'interfaccia che permettesse la ricerca e il filtro di occupazioni lavorative basate su differenti linguaggi di programmazione,per permettere ad un generico studente neolaureato in ingegneria informatica di orientarsi tra le varie proposte.Oggetto principale della ricerca sono i lavori, con la possibilità di filtrare le opzioni secondo tipologia di lavoro (part-time o full-time,da remoto o in sede).E' possibile scegliere tra 5 diverse città.
+Obiettivo del progetto era creare un'interfaccia che permettesse la ricerca e il filtro di occupazioni lavorative basate su differenti linguaggi di programmazione,per permettere ad un generico studente neolaureato in ingegneria informatica di orientarsi tra le varie proposte. Oggetto principale della ricerca sono i lavori, con la possibilità di filtrare le opzioni secondo tipologia di lavoro (part-time o full-time,da remoto o in sede).E' possibile scegliere tra 5 diverse città.
 Il tutto avviene attraverso la comunicazione con un apposito protocollo mettendosi al servizio di un Client.
 L'applicazione permette le seguenti rotte distinte mediante API REST (GET e POST):
 * Suggerimento di 5 città su cui operare le ricerche;
@@ -85,8 +85,76 @@ Il progetto è suddiviso nei seguenti pacchetti:
 
 
 ## **Diagrammi delle classi:**
-In questa sezione è riportata a livello generale la struttura del progetto, quindi le classi che lo compongono:una prima classe denominata [Python] che è l'ossatura dello stesso, contiene i metodi e gli attributi per costituire il menù di scelta e porre un primo filtro riguardante i lunguaggi di programmazione possibili, inoltre richiama la seconda classe:la classe [specs] che si occupa di scorrere il file di testo cercando l'occorrenza di lavori part e full time e infine ne calcola le statistiche.
 
+### com.progetto.progetto
+
+
+<img width="258" alt="Schermata 2021-09-30 alle 22 01 33" src="https://user-images.githubusercontent.com/89023405/135522702-c8acd861-7cbe-432a-8e3f-2bb1d3166f73.png">
+
+
+### com.progetto.progetto.controller
+
+
+
+
+<img width="347" alt="Schermata 2021-09-30 alle 22 07 49" src="https://user-images.githubusercontent.com/89023405/135523355-f435b24c-850a-4dfe-ab5e-2aafeac60613.png">
+
+
+
+
+### com.progetto.progetto.Exception
+
+
+
+
+
+<img width="471" alt="Schermata 2021-09-30 alle 22 13 54" src="https://user-images.githubusercontent.com/89023405/135524021-5972005b-22e4-4d31-aefd-f65101f60b1b.png">
+
+
+
+### com.progetto.progetto.Filter
+
+
+
+
+<img width="477" alt="Schermata 2021-09-30 alle 22 23 46" src="https://user-images.githubusercontent.com/89023405/135525207-d17af24e-106b-4e5d-8d9e-9a0ee6b0dded.png">
+
+
+
+
+### com.progetto.progetto.Model
+
+
+
+
+
+<img width="541" alt="Schermata 2021-09-30 alle 22 51 02" src="https://user-images.githubusercontent.com/89023405/135528265-9d064413-a45a-4e6b-b4f1-13400c36c768.png">
+
+
+
+
+### com.progetto.progetto.Service
+
+
+
+
+<img width="543" alt="Schermata 2021-09-30 alle 23 20 13" src="https://user-images.githubusercontent.com/89023405/135531783-dee2c0ca-2a00-4554-9034-2036c792575e.png">
+
+
+
+
+
+
+
+
+### com.progetto.progetto.Utils
+
+
+
+
+
+
+<img width="553" alt="Schermata 2021-09-30 alle 23 34 05" src="https://user-images.githubusercontent.com/89023405/135533289-9708d38d-74ff-4a1f-a256-f81891483adf.png">
 
 
 
