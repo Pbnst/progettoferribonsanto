@@ -53,18 +53,33 @@ GET | /stats | Calcola le statistiche per i lavori
 
 #### Per la chiamata POST il filtro va scritto nel body
 
-# Filtri e Statistiche 
+# Filtri
 
 Operatore | Descrizione
 ----------|------------
-Location| Mostra i Job con il valore precisato
-Nin| Mostra i job senza il valore precisato
-FullIn| Mostra i job con il valore precisato 
-Part | Mostra i job con il valore precisato
+In| Mostra i Job con il valore precisato
+Nin|Mostra i job senza il valore precisato
+
+
 
 
 
 # *Struttura del Progetto*
+
+## **Packages:**
+Il progetto è suddiviso nei seguenti pacchetti:
+
+
+
+
+<img width="374" alt="Schermata 2021-09-30 alle 16 51 01" src="https://user-images.githubusercontent.com/89023405/135478860-c208db9e-104f-4743-a49e-56adaa166d61.png">
+
+
+
+
+
+
+
 ## **Diagrammi delle classi:**
 In questa sezione è riportata a livello generale la struttura del progetto, quindi le classi che lo compongono:una prima classe denominata [Python] che è l'ossatura dello stesso, contiene i metodi e gli attributi per costituire il menù di scelta e porre un primo filtro riguardante i lunguaggi di programmazione possibili, inoltre richiama la seconda classe:la classe [specs] che si occupa di scorrere il file di testo cercando l'occorrenza di lavori part e full time e infine ne calcola le statistiche.
 
@@ -74,7 +89,42 @@ In questa sezione è riportata a livello generale la struttura del progetto, qui
 
 ## **Diagramma delle sequenze:**
 
-Analizziamo in questo punto la sequenza di operazioni da un punto di vista sequenziale, osservando come viene gestita a livello software la richiesta da parte dell'utente dall'inizio alla fine.
+In questa sezione esaminiamo nello specifico le chiamate che l'utente può effettuare utilizzando i diagrammi delle sequenze, che mostrano le interazioni tra le classi.
+
+* ### Chiamata GET/cities
+
+
+
+<img width="337" alt="Schermata 2021-09-30 alle 16 57 50" src="https://user-images.githubusercontent.com/89023405/135480540-f89e5208-347f-4b1c-ba1f-9788357a21fe.png">
+
+
+* ### Chiamata GET/metadata
+
+
+
+
+<img width="380" alt="Schermata 2021-09-30 alle 17 02 34" src="https://user-images.githubusercontent.com/89023405/135480866-aa106d03-e7a8-4031-9848-a83c616808b4.png">
+
+
+
+
+* ### Chiamata POST/jobs
+
+
+
+
+<img width="772" alt="Schermata 2021-09-30 alle 17 16 17" src="https://user-images.githubusercontent.com/89023405/135483304-360d2f58-eaaa-452a-8730-84c608b779d2.png">
+
+
+
+
+* ### Chiamata GET/stats
+
+
+
+
+<img width="833" alt="Schermata 2021-09-30 alle 17 34 36" src="https://user-images.githubusercontent.com/89023405/135486354-dee62bbb-d6af-4f1d-9501-2e193c42cca1.png">
+
 
 
 
@@ -82,11 +132,12 @@ Analizziamo in questo punto la sequenza di operazioni da un punto di vista seque
 
 ## **Diagramma dei casi d'uso:**
  
-In figura sono riportate le operazioni possibili sia a livello utente che a livello software durante l'esecuzione del programma
+In figura sono riportate le richieste possibili da effettuare tramite API REST
 
 
 
 
+<img width="559" alt="Schermata 2021-09-30 alle 16 39 30" src="https://user-images.githubusercontent.com/89023405/135476735-f9e0bc10-4bee-4223-84f4-93bcb4f9ffda.png">
 
 
 
