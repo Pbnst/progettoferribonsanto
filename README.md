@@ -61,8 +61,8 @@ Operatore | Descrizione
 ----------|------------
 In| Mostra i Job con il valore precisato
 Nin|Mostra i job senza il valore precisato
-FullIn | Mostra i job con il valore precisato
-Part | Mostra i job con il valore precisato
+FullIn | Mostra i job fulltime
+Part | Mostra i job part time 
 
 
 
