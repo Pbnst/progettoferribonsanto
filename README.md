@@ -65,6 +65,12 @@ FullIn | Mostra i job fulltime
 Part | Mostra i job part time 
 
 
+I filtri possono inoltre essere concatenati tramite una logica AND e/o OR.
+Un esempio di filtro da inserire nel body della chiamata può essere:
+
+{"Location":{"In":"London"}, {"employment_type":"and","In":"full time"}}
+
+
 
 
 
