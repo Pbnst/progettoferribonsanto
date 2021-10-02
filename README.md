@@ -223,5 +223,5 @@ In figura sono riportate le richieste possibili da effettuare tramite API REST
 
 
 ## **Autori**
-* [Filippo Ferri](https://github.com/Pbnst/progettoferribonsanto) 
-* [Pietro Bonsanto](https://github.com/Pbnst/progettoferribonsanto)
+* [Filippo Ferri](https://github.com/Pbnst/progettoferribonsanto) : Sviluppo del progetto orientato sul codice 
+* [Pietro Bonsanto](https://github.com/Pbnst/progettoferribonsanto) :Sviluppo a livello concettuale: diagrammi uml e ReadME
