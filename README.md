@@ -210,7 +210,7 @@ In questa sezione esaminiamo nello specifico le chiamate che l'utente può effet
 
 ## **Diagramma dei casi d'uso:**
  
-In figura sono riportate le richieste possibili da effettuare tramite API REST
+In figura sono riportate le richieste possibili da effettuare tramite API REST:
 
 
 
