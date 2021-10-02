@@ -1,3 +1,4 @@
+
 package com.progetto.progetto.Utils;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -5,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.net.HttpURLConnection;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONValue;
@@ -14,47 +16,51 @@ import org.json.simple.JSONValue;
  * @author pietrobonsanto
  *
  */
-public class JSONDownloader {
+ public class JSONDownloader {
 	
 	/** metodo che scarica il JSON e lo trasforma in JSON array
 	 * @return JSON arraycon i dati scaricati
-	 */
-	
-	
+	 *
+	**/
 	public static JSONArray JSONDownloadato() {
 	
-	String data="";
+	//JSONObject obj = null;	
+		
+    String data="";
 	String line="";
 	String url = "https://findwork.dev/api/jobs/";
-	String token = "dfac007afb1130c8d529e192f72097f254bb4fa2";
-	{
+	
+	
 	try{
-		
-		URLConnection openConnection = new URL(url).openConnection();
-		openConnection.addRequestProperty("User-Agent",
-				"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
-	InputStream in= openConnection.getInputStream();
-	openConnection.setRequestProperty("Authorization", token);
+		HttpURLConnection openConnection = (HttpURLConnection) new URL(url).openConnection();
+		openConnection.setRequestMethod("GET");
+ 		openConnection.addRequestProperty("User-Agent", "default");
+		openConnection.addRequestProperty("Authorization", "Token 92e34789ad8bd5b885f25e5454d3aa645eeea845 ");
+        openConnection.setRequestProperty("Accept", "application/json");
+        InputStream in= openConnection.getInputStream();
+	
 	
 	try {
-		InputStreamReader inR=new InputStreamReader(in);
+		InputStreamReader inR =new InputStreamReader(in);
 		BufferedReader buf= new BufferedReader(inR);
 		
-		while ((line=buf.readLine())!= null) {
+		while ((line = buf.readLine()) != null) {
 			data+=line;
 		}
 	}finally {
 		in.close();
 	}
+	//obj = (JSONObject) JSONValue.parseWithException(data);
 	
 } catch (IOException e) {
 	e.printStackTrace();
 } catch (Exception e) {
 	e.printStackTrace();
 }
-
-JSONArray json= (JSONArray) JSONValue.parse(data);
+   JSONArray json = new JSONArray();
+	json.add(JSONValue.parse(data));
+//JSONArray json= (JSONArray) JSONValue.parse(data);
 return json;
 }
-	}}
+	}
 

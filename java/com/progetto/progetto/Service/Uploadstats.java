@@ -19,9 +19,9 @@ public class Uploadstats {
 		 * @return un oggetto di tipo ModelloStatistiche
 		 */
 		public static ModelloStatistiche getStats() {
-			stat.setJobloc(Statistiche.contaLocation(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
+			stat.setJobloc(Statistiche.contaSede(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
 			stat.setJobfull(Statistiche.contaftime(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
-		    stat.setJobrem(Statistiche.contaLocationnin(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
+		    stat.setJobrem(Statistiche.contaRemoto(JSONParser.parsaJson(JSONDownloader.JSONDownloadato())));
 			return stat;
 		}
 

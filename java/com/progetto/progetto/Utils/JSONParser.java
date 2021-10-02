@@ -13,44 +13,52 @@ import com.progetto.progetto.Model.Job;
 public class JSONParser {
  public static ArrayList<Job> parsaJson(JSONArray jsonArray) {
 	 ArrayList<Job> jjj = new ArrayList<Job>();
-	 for(int i = 0; i< jsonArray.size(); i++) {
+	 boolean vera= true;
+	 for(int i = 0; i< jsonArray.size(); i++)
+	 {
 		 Job j = new Job();
 		 JSONObject ogg = (JSONObject) jsonArray.get(i);
-		 j.setId((int) ogg.get("id"));
+		 //j.setId((long) ogg.get("id")); 
 		 j.setRole((String) ogg.get("role"));
 		 j.setCname((String) ogg.get("cname"));
 		 
-		 JSONObject ut = (JSONObject) ogg.get("text");
+		 j.setEnumber((String) ogg.get("enumber"));
 		 
-		 j.setEnumber((int) ut.get("enumber"));
-		 j.setLocation((String) ut.get("location"));
-		 j.setRemote((String) ut.get("remote"));
-		 j.setEtype((String) ut.get("etype"));
+		 if(ogg.get("etype").equals("full time")) {
+			 j.setEtype("full time");
+			 
+		 }
+		 else 
+			 j.setEtype((String) ogg.get("part time"));
 		 
-		 if(ut.get("location").equals("null")) {
-			 j.setLocation("location ignota");
+		 j.setLocation((String) ogg.get("location"));
+		 j.setRemote((boolean) ogg.get("remote"));
+		
+		 
+		  if(ogg.get("remote").equals(vera)) {
+			 j.setLocation("remote");}
+		// }
+		 /* else {j.setLocation((String) ogg.get("location"));
 		 }
-		 else {j.setLocation((String) ut.get("location"));
-		 }
-		  if(ut.get("remote").equals("false")) {
-			 j.setRemote("lavoro non in remoto");
-		 }
-		 else {j.setRemote((String) ut.get("remoto"));
+		  if(ogg.get("remote").equals("false")) {
+		   j.setRemote("lavoro non in remoto"); 
+		 }*/
+		/** else {j.setRemote((String) ogg.get("remoto"));
 		 
 		 }
-		 if (ut.get("etype").equals("full time")) {
+		 if (ogg.get("etype").equals("full time")) {
 			 j.setEtype("lavoro fulltime");
-		 }
-		 else {j.setEtype((String) ut.get("a contratto/part time"));
-		 }
+		 } 
+		 else {j.setEtype((String) ogg.get("a contratto/part time"));
+		 }*/
 			 
 		 jjj.add(j);
 	 }
 	 return jjj;
 			 
-		 
+	 }
 		 
 				 
- }}
+ }
  
 

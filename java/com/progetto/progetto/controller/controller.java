@@ -33,16 +33,13 @@ public class controller {
 	 * 
 	 */
 	
-       @RequestMapping(value = "/cities", headers = "Authorization=Token dfac007afb1130c8d529e192f72097f254bb4fa2" , method = RequestMethod.GET)
+       @RequestMapping(value = "/cities", method = RequestMethod.GET)
        public ResponseEntity<Object> getCity(){
 	   //ritorna la lista delle città - invoco il servizio con getProducts
 	return new ResponseEntity<>(CityService.getCities(), HttpStatus.OK);
 }
 		
-
-
-
-  /*rotta per ottenere i jobs
+/*rotta per ottenere i jobs
    * 
 		@RequestMapping(value = "/jobs")
 		public ResponseEntity<Object> getJob() {
@@ -56,7 +53,7 @@ public class controller {
  * 
  * @return Restituisce i metadati sotto forma di JSON
  */
-		@RequestMapping(value = "/metadata", headers = "Authorization=Token dfac007afb1130c8d529e192f72097f254bb4fa2" ,method = RequestMethod.GET)
+		@RequestMapping(value = "/metadata", method = RequestMethod.GET)
 		public ResponseEntity<Object> getMetadata() {
 			return new ResponseEntity<>(jobService.getMetada(), HttpStatus.OK);
 		}
@@ -71,7 +68,7 @@ public class controller {
  *                                    e' errato
  * @throws Exception
  */
-@RequestMapping(value = "/jobs", headers = "Authorization=Token dfac007afb1130c8d529e192f72097f254bb4fa2" , method = RequestMethod.POST)
+@RequestMapping(value = "/jobs", method = RequestMethod.POST)
 public ResponseEntity<ArrayList<Job>> getFilteredJobs(@RequestBody Object filter)
 		throws UnexistingFilterException, WrongArgumentException, Exception {
 	return new ResponseEntity<>(CO.COColumn(filter), HttpStatus.CREATED);
@@ -85,7 +82,7 @@ public ResponseEntity<ArrayList<Job>> getFilteredJobs(@RequestBody Object filter
  */
 
 
-@RequestMapping(value = "/stats", headers = "Authorization=Token dfac007afb1130c8d529e192f72097f254bb4fa2" , method = RequestMethod.GET)
+@RequestMapping(value = "/stats", method = RequestMethod.GET)
 public ResponseEntity<Object> getStats()
 		throws UnexistingFilterException, WrongArgumentException, Exception {
 	     return new ResponseEntity<>(jobService.getStats(), HttpStatus.OK);

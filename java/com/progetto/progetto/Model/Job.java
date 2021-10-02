@@ -1,13 +1,13 @@
 package com.progetto.progetto.Model;
 public class Job {
 
-	private int id;
+	private long id;
 	private String role;
 	private String cname;
-	private int enumber;
+	private String enumber;
 	private String etype;
 	private String location;
-	private String remote;
+	private boolean remote;
 	
 	/** costruttore
 	 * 
@@ -16,7 +16,7 @@ public class Job {
 		super();
 	}
 	
-	public Job(int id, String role, String cname, int enumber, String etype, String location, String remote) {
+	public Job(long id, String role, String cname, String enumber, String etype, String location, boolean remote) {
 	this.id = id;
 	this.role = role;
 	this.cname = cname;
@@ -31,11 +31,11 @@ public class Job {
 	 * 
 	 */
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -55,11 +55,11 @@ public class Job {
 		this.cname = cname;
 	}
 
-	public int getEnumber() {
+	public String getEnumber() {
 		return enumber;
 	}
 
-	public void setEnumber(int enumber) {
+	public void setEnumber(String enumber) {
 		this.enumber = enumber;
 	}
 
@@ -79,11 +79,11 @@ public class Job {
 		this.location = location;
 	}
 
-	public String getRemote() {
+	public boolean getRemote() {
 		return remote;
 	}
 
-	public void setRemote(String remote) {
+	public void setRemote(boolean remote) {
 		this.remote = remote;
 	
 	}

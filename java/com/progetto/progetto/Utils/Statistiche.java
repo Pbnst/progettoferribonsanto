@@ -14,14 +14,14 @@ public class Statistiche {
 	 * @return numero dei job con location
 	 * 
 	 */
-	static public int contaLocation(ArrayList<Job> job) {
-		int contatore_location=0;
+	static public int contaRemoto(ArrayList<Job> job) {
+		int contaremoto=0;
 		for (Job j : job) {
-			if (!j.getLocation().equals("null ")) {
-				contatore_location++;
+			if (j.getRemote()) {
+				contaremoto++;
 			}
 		}
-		return contatore_location;
+		return contaremoto;
 	}
 
 	/**metodo che veritfica l'assenza di location e quindi i job in remoto
@@ -30,16 +30,16 @@ public class Statistiche {
 	 * 
 	 */
 	 
-	
-	static public int contaLocationnin(ArrayList<Job> job) {
-		int contatoreremote=0;
+	static public int contaSede(ArrayList<Job> job) {
+		int contasede=0;
 		for (Job j : job) {
-			if (j.getLocation().equals("null ")) {
-				contatoreremote++;
+			if (!j.getRemote()) {
+				contasede++;
 			}
 		}
-		return contatoreremote;
+		return contasede;
 	}
+	
 	
 	
 
@@ -69,13 +69,45 @@ static public int contaftime(ArrayList<Job> job) {
 static public int contaptime(ArrayList<Job> job)	 {
 	int contaptime=0;
 	for (Job j : job) {
-		if (j.getEtype().equals("contract")) {
+		if (j.getEtype().equals("part time")) {
 			contaptime++;
 		}
 	}
 	return contaptime;
 }
- 
+/**
+ * Metodo che conta la frequenza per ogni citta'NON SERVE FILO CANCELLA
+ *
+ * @param job Array di job da controllare
+ * @return un Array di frequenze
+ * @see Frequenze
+ */
+
+
+/* static public ArrayList<Frequenze> freqLocUt(ArrayList<Job> job) {
+	ArrayList<Frequenze> arrayfrequenze = new ArrayList<Frequenze>();
+	
+	
+	for (Job j : job) {
+		Frequenze f = new Frequenze();
+		f.setnumvisite(0);
+		f.setCitta(t.getLocation());
+		if (arrayfrequenze.isEmpty()) {
+			f.incrementanumvisite();
+			arrayfrequenze.add(f);
+		}
+		
+		else {
+
+			
+					
+				
+			}}}	
+			
+
+
+	return arrayfrequenze;*/ // non ci serve 
+
 
 }
 

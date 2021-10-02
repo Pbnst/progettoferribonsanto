@@ -1,5 +1,10 @@
 package com.progetto.progetto.Model;
 
+/**  classe che modella le statistiche 
+ * 
+ * @author pietrobonsanto
+ *
+ */
 public class ModelloStatistiche {
 private int jobloc;
 private int jobrem;
