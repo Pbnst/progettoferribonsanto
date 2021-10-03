@@ -24,7 +24,7 @@ public class CO {
 	 * con cui aggiungere il filtro ai precedenti.
 	 * 
 	 * @param filter contiene il JSON con le informazioni sul filtraggio
-	 * @return l'Array list di job filtrati
+	 * @return l'Array list di Job filtrati
 	 * @throws Exception
 	 * @throws FiltroInesistenteException viene lanciato se il filtro non viene
 	 *                                    trovato trovato.
@@ -72,7 +72,7 @@ public class CO {
 	 * @param filterParam   contiene i parametri di filtraggio.
 	 * @param previousArray rappresenta l'ArrayList ottenuto dai filtraggi
 	 *                      precedenti relativi ad altre colonne.
-	 * @return l'ArrayList di Tweet filtrati
+	 * @return l'ArrayList di Job filtrati
 	 * @throws Exception
 	 * @throws UnexistingFilterException viene lanciato se il filtro non viene
 	 *                                    trovato trovato.
