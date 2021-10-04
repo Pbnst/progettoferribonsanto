@@ -7,9 +7,15 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.HttpURLConnection;
+import java.io.*;
+import java.net.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
+import org.json.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONValue;
+import com.progetto.progetto.Model.Job;
 
 /**classe che mi permette di scaricare i JSON dall'url fornito
  * @link https://findwork.dev/api/jobs/
@@ -35,7 +41,7 @@ import org.json.simple.JSONValue;
 		HttpURLConnection openConnection = (HttpURLConnection) new URL(url).openConnection();
 		openConnection.setRequestMethod("GET");
  		openConnection.addRequestProperty("User-Agent", "default");
-		openConnection.addRequestProperty("Authorization", "Token 92e34789ad8bd5b885f25e5454d3aa645eeea845 ");
+		openConnection.addRequestProperty("Authorization", "Token b6dc26e83cfb26e53244c88d46113e6729063b1c ");
         openConnection.setRequestProperty("Accept", "application/json");
         InputStream in= openConnection.getInputStream();
 	
@@ -62,5 +68,7 @@ import org.json.simple.JSONValue;
 //JSONArray json= (JSONArray) JSONValue.parse(data);
 return json;
 }
-	}
-
+	
+ }
+ 
+ 

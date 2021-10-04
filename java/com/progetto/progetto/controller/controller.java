@@ -25,11 +25,16 @@ import com.progetto.progetto.Exception.UnexistingFilterException;
 @RestController
 public class controller {
 	@Autowired
-	private JobServiceImpl jobService;
+	private JobServiceImpl JobService;
 	private CityServiceImpl CityService;
- 
-	
-	/*+ rotta per mostrare le città su cui fare le ricerche ( la location sarà la città stessa)
+ /** costruttore del controller
+  * 
+  */
+	public controller() {
+		CityService = new CityServiceImpl();
+		JobService = new JobServiceImpl();
+	}
+ 	/*+ rotta per mostrare le città su cui fare le ricerche ( la location sarà la città stessa)
 	 * 
 	 */
 	
@@ -85,7 +90,7 @@ public ResponseEntity<ArrayList<Job>> getFilteredJobs(@RequestBody Object filter
 @RequestMapping(value = "/stats", method = RequestMethod.GET)
 public ResponseEntity<Object> getStats()
 		throws UnexistingFilterException, WrongArgumentException, Exception {
-	     return new ResponseEntity<>(jobService.getStats(), HttpStatus.OK);
+	     return new ResponseEntity<>(jobService.getStats(), HttpStatus.OK);*/
 }
 
 

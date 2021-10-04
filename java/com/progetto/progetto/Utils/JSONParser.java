@@ -18,7 +18,7 @@ public class JSONParser {
 	 {
 		 Job j = new Job();
 		 JSONObject ogg = (JSONObject) jsonArray.get(i);
-		 //j.setId((long) ogg.get("id")); 
+		 j.setId((long) ogg.get("id")); 
 		 j.setRole((String) ogg.get("role"));
 		 j.setCname((String) ogg.get("cname"));
 		 
@@ -59,6 +59,22 @@ public class JSONParser {
 	 }
 		 
 				 
- }
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
  
 
