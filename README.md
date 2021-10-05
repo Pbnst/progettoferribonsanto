@@ -222,7 +222,7 @@ In figura sono riportate le richieste possibili da effettuare tramite API REST:
 
 ## **Software utilizzati**
 * [Eclipse](https://www.eclipse.org/downloads/) - ambiente di sviluppo 
-* [Uml Designer](https://www.umldesigner.org) - strumento per la creazione di diagrammi 
+* [Uml Designer](https://app.diagrams.net/?libs=general;flowchart) - strumento per la creazione di diagrammi 
 * [Postman](https://www.postman.com) - strumento per il test di API call
 * [SpringBoot](https://spring.io/projects/spring-boot) - framework per sviluppo di applicazioni in Java
 
